@@ -1,0 +1,24 @@
+{
+	"folders": [
+		{
+			"path": "../learn-cpp"
+		},
+		{
+			"path": "../learn-java"
+		},
+		{
+			"path": "../learn-python"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"array": "cpp",
+			"string_view": "cpp",
+			"initializer_list": "cpp",
+			"utility": "cpp",
+			"iostream": "cpp",
+			"xutility": "cpp",
+			"iterator": "cpp"
+		}
+	}
+}
