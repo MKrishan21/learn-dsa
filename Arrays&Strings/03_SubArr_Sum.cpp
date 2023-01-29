@@ -1,5 +1,9 @@
 #include <iostream>
 using namespace std;
+/*simple program to find subarry sum
+
+where numbers less then zero gets negleted*/
+
 
 int Max_SubArr_sum(int arr[], int n)
 {
