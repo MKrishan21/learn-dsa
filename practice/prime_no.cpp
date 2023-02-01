@@ -1,3 +1,7 @@
+/*This is a C++ program that checks if a given number is a prime number or not.
+
+The program first takes an integer input from the user and stores it in the variable "n".*/
+
 #include <iostream>
 using namespace std;
 
@@ -15,6 +19,10 @@ bool isPrime(int n)
         }
     }
 }
+
+/*it calls the function "isPrime" which takes an
+integer as an argument and returns a boolean value
+indicating whether the number is prime or not.*/
 
 int main()
 {
