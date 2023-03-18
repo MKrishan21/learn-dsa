@@ -2,66 +2,67 @@
 #include <vector>
 using namespace std;
 
-void merge(int arr[], int l, int m, int r)
+void merge(vector<int> &arr, int s, int e)
 {
-    int i = l;
+    int i = s;
+    int m = (s + e) / 2;
     int j = m + 1;
 
-    vector<int> v;
+    vector<int> temp;
 
-    while (i <= m and j <= r)
+    while (i <= m and j <= e)
     {
         if (arr[i] < arr[j])
         {
-            v.push_back(arr[i]);
+            temp.push_back(arr[i]);
             i++;
         }
         else
         {
-            v.push_back(arr[j]);
+            temp.push_back(arr[j]);
             j++;
         }
     }
     while (i <= m)
     {
-        v.push_back(arr[i++]);
+        temp.push_back(arr[i++]);
     }
-    while (j <= r)
+    while (j <= e)
     {
-        v.push_back(arr[j++]);
+        temp.push_back(arr[j++]);
     }
     int count = 0;
-    for (int k = l; k <= r; k++)
+    for (int k = s; k <= e; k++)
     {
-        arr[k] = v[count++];
+        arr[k] = temp[count++];
     }
     return;
 }
 
-void mergesort(int arr[], int l, int r)
+void mergesort(vector<int> &v, int s, int e)
 {
-    if (l < r)
+    if (s >= e)
     {
-        int mid = (l + r) / 2;
-        mergesort(arr, l, mid);
-        mergesort(arr, mid + 1, r);
-        merge(arr, l, mid, r);
+        return;
     }
+    int mid = (s + e) / 2;
+    mergesort(v, s, mid);
+    mergesort(v, mid + 1, e);
+
+    return merge(v, s, e);
 }
 
 int main()
 {
-    int arr[] = {2, 12, 32, 15, 14, 11, 25};
-    int n = sizeof(arr) / sizeof(int);
-    int l = 0;
-    int r = n - 1;
+    vector<int> v{4, 5, 2, 4, 8, 9, 9, 7, 12, 14};
+    int s = 0;
+    int e = v.size() - 1;
 
-    mergesort(arr, l, r);
+    mergesort(v, s, e);
 
-    for (int i : arr)
+    for (auto i : v)
     {
         cout << i << " ";
     }
-
     return 0;
 }
