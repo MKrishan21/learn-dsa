@@ -17,9 +17,11 @@ int main()
 
     while (temp != NULL)
     {
-        cout << temp->getData() << "->";
+        cout << temp->data << "->";
         temp = temp->next;
     }
+    temp->next = NULL;
+
     cout << endl;
 
     return 0;

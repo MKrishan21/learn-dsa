@@ -2,8 +2,6 @@
 #include "list.h"
 using namespace std;
 
-
-
 int middleElement(Node *head)
 {
     Node *slow = head;
@@ -24,14 +22,11 @@ int main()
     l.push_back(49);
     l.push_back(30);
     l.push_back(11);
-    // l.push_back(4);
-    // l.push_back(5);
-    // l.push_back(6);
+    l.push_back(4);
+    l.push_back(5);
+    l.push_back(6);
 
     Node *head = l.begin();
-
-    cout << endl;
-    cout << countElement(head) << endl;
     cout << middleElement(head);
 
     return 0;
