@@ -1,6 +1,1 @@
-while (!s.empty())
-    // {
-    //     cout << "before->";
-    //     cout << s.top() << endl;
-    //     s.pop();
-    // }
+    // InsertAtBottom(s, 20);
